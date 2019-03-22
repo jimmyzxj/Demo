@@ -87,7 +87,7 @@ public class LRUTest<T> {
 		if ((size() + 1) > capacity) {
 			Node end = tail;
 			tail = end.pre;
-			end.pre.next = null;
+			tail.next = null;
 			end = null;
 			insertHead(item);
 		} else {
